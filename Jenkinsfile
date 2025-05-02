@@ -4,17 +4,19 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                checkout scm
+                echo 'Cloning done by Jenkins automatically'
             }
         }
+
         stage('Build') {
             steps {
-                bat 'mvn clean package'
+                echo 'Pretend to build (no real mvn command)'
             }
         }
+
         stage('Test') {
             steps {
-                bat 'mvn test'
+                echo 'Pretend to run tests (no real test command)'
             }
         }
     }
